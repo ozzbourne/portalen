@@ -42,7 +42,7 @@ class App extends Component {
   authHandler = async (authData) => {
     const userApp = await base.fetch(this.props.match.params.appId, {context: this});
     // this.props.updateOwner(userApp.owner);
-    alert(authData.user.email);
+    alert("Ta bort all hantering, se till att man loggar ut innan man gör en ny app bara!");
     this.setState({isLoading: false})
   }
   
