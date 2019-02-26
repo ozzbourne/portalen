@@ -19,7 +19,7 @@ class Router extends React.Component {
   state = {
     database: {},
     userEmail: null,
-    owner: null,
+    owner: "nulliString",
     // isLoading används för att inte visa <Login /> medan data hämtas från Firebase, är användaren inloggad visas appen direkt när data hämtats.
     isLoading: false,
     appId: null,
