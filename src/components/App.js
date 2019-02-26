@@ -41,8 +41,7 @@ class App extends Component {
   //Med isLoading ser jag till att inte visa upp appen förrän data har hämtats och kontrollerat ägare mot användare.
   authHandler = async (authData) => {
     const userApp = await base.fetch(this.props.match.params.appId, {context: this});
-    // this.props.updateOwner(userApp.owner);
-    alert("Ta bort all hantering, se till att man loggar ut innan man gör en ny app bara!");
+    this.props.updateOwner(userApp.owner);
     this.setState({isLoading: false})
   }
   
