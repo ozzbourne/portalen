@@ -42,7 +42,7 @@ class App extends Component {
   authHandler = async (authData) => {
     const userApp = await base.fetch(this.props.match.params.appId, {context: this});
     // this.props.updateOwner(userApp.owner);
-    alert(userApp.owner);
+    alert(authData.user.email);
     this.setState({isLoading: false})
   }
   
