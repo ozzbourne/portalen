@@ -133,7 +133,7 @@ class Router extends React.Component {
                 // Nested ternary condition. I grunden som en else-if sats. 
                 // isLoading är en variabel i state som kommer vara true medan data hämtas från Firebase. Undviker att visa upp fel innehåll om ingen data hämtats.
                 (!this.state.userEmail && this.state.isLoading === false) ? <Login authenticate={this.authenticate}/> :
-                ((this.state.userEmail !== this.state.owner || this.state.owner !== undefined)) ? <NotYourAccount logout={this.logout}/> : 
+                ((this.state.userEmail !== this.state.owner) && this.state.isLoading === false) ? <NotYourAccount logout={this.logout}/> : 
                 this.state.isLoading === false ? 
                 <App 
                   match={match} 
